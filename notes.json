@@ -1,0 +1,193 @@
+{
+  "label": "August 24",
+  "areas": [
+    {
+      "name": "Michael Melo",
+      "short": "No Code Next Gen",
+      "owner": "No Code Next Gen",
+      "queues": [
+        "https://miurl.cc/payrl6RmI"
+      ],
+      "items": [
+        {
+          "k": "NCNG-1487",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Runtime</strong> — Fixed double vertical scrollbars appearing on runtime screens when the draft-version banner was shown."
+        },
+        {
+          "k": "NCNG-1133",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Canvas</strong> — Fixed vertical resize on the Canvas so mouse wheel scrolling now extends the resize while dragging a handle."
+        },
+        {
+          "k": "NCNG-1720",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>App Builder</strong> — Unmapped label names now auto-update to match their text content as it changes."
+        },
+        {
+          "k": "NCNG-1872",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Radio Group</strong> — Fixed extra empty space appearing below the last option in a vertical radio group."
+        },
+        {
+          "k": "NCNG-1884",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Checkbox</strong> — Fixed checkbox labels rendering lower than the checkbox square instead of vertically centered."
+        },
+        {
+          "k": "NCNG-753",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Radio Group properties panel</strong> — Fixed the Values table layout breaking in the properties panel when option text was very long."
+        },
+        {
+          "k": "NCNG-1935",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Chart</strong> — Fixed dropdown-type columns rendering blank in a chart's drilldown grid at runtime."
+        },
+        {
+          "k": "NCNG-1970",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>App Builder</strong> — Fixed Undo/Redo so resizing, moving, or removing a component creates its own undo step instead of deleting components."
+        },
+        {
+          "k": "NCNG-1878",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Math Action</strong> — Fixed Math Action rounding results rendering as a date/time instead of a number in some cases."
+        },
+        {
+          "k": "NCNG-1983",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>App Builder</strong> — Fixed a Text area rendering shorter at runtime than the height set in App Builder."
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "name": "Arshi Sayed",
+      "short": "Connect",
+      "owner": "Connect / Admin",
+      "queues": [
+        "https://miurl.cc/OaMRr5XmI",
+        "https://miurl.cc/eMq852dmI"
+      ],
+      "items": [
+        {
+          "k": "PL-64378",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>QBO Projects sync</strong> — Enabled backend support for the accounting sync-status widget on Customer Project records."
+        },
+        {
+          "k": "PL-64377",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>QBO Projects sync</strong> — Implemented bi-directional sync between Method and QuickBooks Online for Customer Projects."
+        },
+        {
+          "k": "PL-63768",
+          "audience": "internal",
+          "kind": "sec",
+          "t": "<strong>Outlook Gadget sign-in</strong> — Hardened Outlook Gadget sign-in by fixing TLS validation, token signature checks, and an SSRF exposure."
+        },
+        {
+          "k": "PL-64805",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>User Management</strong> — Added a backend role-metadata API providing one authoritative source of role and seat permissions."
+        },
+        {
+          "k": "PL-64812",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>User invite</strong> — Added routing logic for a new invite experience, currently limited to internal testing accounts."
+        },
+        {
+          "k": "PL-64813",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>User invite</strong> — Built the dialog shell and discard-confirmation flow for a new invite experience, currently limited to internal testing."
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "name": "John Miranda",
+      "short": "Vertical App Experience",
+      "owner": "Vertical App Experience",
+      "queues": [
+        "https://miurl.cc/qbZDRp8mI"
+      ],
+      "items": [
+        {
+          "k": "PL-64637",
+          "audience": "customer",
+          "kind": "fix",
+          "t": "<strong>Editable Grid</strong> — Fixed an issue where custom view filters lost their sorting, filtering, and pagination after an editable grid refreshed."
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "name": "Phil Côté",
+      "short": "CRM Experience",
+      "owner": "CRM Experience",
+      "queues": [
+        "https://miurl.cc/eMq8AypmI"
+      ],
+      "items": [
+        {
+          "k": "PL-63965",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Email screening (internal tool)</strong> — Added backend storage exposing held emails as a Method object for an internal review screen."
+        },
+        {
+          "k": "PL-63966",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Email screening (internal tool)</strong> — Built an internal screen for staff to review and release or block held emails."
+        },
+        {
+          "k": "PL-63972",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Email screening</strong> — Activated the heuristic spam gate to automatically hold clearly malicious emails before classifier review."
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "name": "Courtney Riddell",
+      "short": "Growth",
+      "owner": "Growth",
+      "queues": [
+        "https://miurl.cc/5XGRMV2mI"
+      ],
+      "items": [
+        {
+          "k": "GROW-451",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>ActiveCampaign sync</strong> — Fixed User Administrator status not syncing correctly to ActiveCampaign and backfilled existing contacts."
+        },
+        {
+          "k": "GROW-452",
+          "audience": "customer",
+          "kind": "fix",
+          "t": "<strong>Home</strong> — Fixed an issue where Home Insight cards opened grids without their saved view and filters applied."
+        }
+      ],
+      "excluded": []
+    }
+  ]
+}
