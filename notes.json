@@ -1,0 +1,135 @@
+{
+  "label": "September 8",
+  "areas": [
+    {
+      "name": "Phil Côté",
+      "short": "CRM Experience",
+      "owner": "CRM Experience",
+      "queues": [
+        "https://miurl.cc/a5zbjoZmI"
+      ],
+      "items": [
+        {
+          "k": "PL-64991",
+          "audience": "customer",
+          "kind": "fix",
+          "t": "<strong>Invoices</strong> — Fixed an issue where invoice email details showed a previously sent proposal's template."
+        },
+        {
+          "k": "PL-65220",
+          "audience": "customer",
+          "kind": "feature",
+          "t": "<strong>Editable Grid</strong> — Redesigned card column configuration in the Editable Grid with per-field formatting options."
+        },
+        {
+          "k": "PL-63578",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Layout Rendering</strong> — Fixed a recurring ResizeObserver error triggered by grid and other layout components."
+        },
+        {
+          "k": "PL-64103",
+          "audience": "customer",
+          "kind": "feature",
+          "t": "<strong>Insights tile</strong> — Enhanced Refresh Controls to also update the Insights tile without reloading the screen."
+        },
+        {
+          "k": "PL-64046",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Email public pages</strong> — Enabled monitoring to catch errors on the public unsubscribe and verify pages."
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "name": "John Miranda",
+      "short": "Vertical App Experience",
+      "owner": "Vertical App Experience",
+      "queues": [
+        "https://miurl.cc/lLXder6mI"
+      ],
+      "items": [
+        {
+          "k": "PL-62866",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Analytics</strong> — Migrated backend analytics event delivery from HTTP to Amazon SQS for reliability."
+        }
+      ],
+      "excluded": [
+        {
+          "k": "PL-63560",
+          "reason": "dark project — Inventory Management"
+        },
+        {
+          "k": "PL-64417",
+          "reason": "dark project — Inventory Management"
+        },
+        {
+          "k": "PL-62076",
+          "reason": "dark project — Inventory Management (inv-so-po-shared label)"
+        }
+      ]
+    },
+    {
+      "name": "Arshi Sayed",
+      "short": "Connect",
+      "owner": "Connect / Admin",
+      "queues": [
+        "https://miurl.cc/XaXbr3ymI",
+        "https://miurl.cc/qbA8eGZmI"
+      ],
+      "items": [
+        {
+          "k": "PL-65455",
+          "audience": "customer",
+          "kind": "fix",
+          "t": "<strong>QuickBooks Desktop</strong> — Fixed an issue where taxable QuickBooks Desktop customers weren't getting tax calculated on estimates."
+        },
+        {
+          "k": "PL-64487",
+          "audience": "customer",
+          "kind": "fix",
+          "t": "<strong>Xero</strong> — Fixed an issue where Xero's Full Sync button performed only a changes-only sync."
+        },
+        {
+          "k": "PL-62969",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>LegacyBre</strong> — Refactored legacy business-rule cleanup logic into per-table handlers, removing the old switch statement."
+        },
+        {
+          "k": "PL-65219",
+          "audience": "customer",
+          "kind": "fix",
+          "t": "<strong>Tables &amp; Fields</strong> — Fixed an issue where a custom field on the Users table stopped saving values."
+        },
+        {
+          "k": "PL-64810",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>User Management</strong> — Added server-side eligibility checks and monitoring for Field Crew/Lite role assignment."
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "name": "Courtney Riddell",
+      "short": "Growth",
+      "owner": "Growth",
+      "queues": [
+        "https://miurl.cc/V6XdGodmI"
+      ],
+      "items": [
+        {
+          "k": "GROW-563",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Analytics</strong> — Fixed a backend error that could block user profile syncing to analytics tools."
+        }
+      ],
+      "excluded": []
+    }
+  ]
+}

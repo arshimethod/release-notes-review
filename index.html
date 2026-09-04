@@ -1,0 +1,722 @@
+<style>
+  :root {
+    --ground: #FBFBFC;
+    --surface: #FFFFFF;
+    --surface-2: #F4F5F7;
+    --border: #E6E8EE;
+    --border-strong: #D3D7E0;
+    --ink: #1A1D23;
+    --ink-2: #4B515C;
+    --muted: #838A97;
+    --accent: #0E8A6B;
+    --accent-soft: #E4F3EE;
+    --fix: #3B6FD8;
+    --fix-soft: #E7EEFC;
+    --sec: #B4790E;
+    --sec-soft: #F8EEDB;
+    --internal: #6B7280;
+    --internal-soft: #EDEFF2;
+    --warn: #C2410C;
+    --warn-soft: #FCEAE0;
+    --shadow: 0 1px 2px rgba(20,24,31,.04), 0 2px 8px rgba(20,24,31,.05);
+    --shadow-lg: 0 8px 30px rgba(20,24,31,.14);
+    --radius: 10px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #0F1216; --surface: #171B21; --surface-2: #1D222A; --border: #262C34;
+      --border-strong: #333B45; --ink: #E7EAF0; --ink-2: #B4BAC6; --muted: #7E8695;
+      --accent: #34B592; --accent-soft: #123027; --fix: #6D9BF2; --fix-soft: #17233A;
+      --sec: #D9A64A; --sec-soft: #2E2413; --internal: #8C94A2; --internal-soft: #21262E;
+      --warn: #F08A5C; --warn-soft: #331A10;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 2px 10px rgba(0,0,0,.35);
+      --shadow-lg: 0 10px 40px rgba(0,0,0,.55);
+    }
+  }
+  :root[data-theme="light"] {
+    --ground: #FBFBFC; --surface: #FFFFFF; --surface-2: #F4F5F7; --border: #E6E8EE;
+    --border-strong: #D3D7E0; --ink: #1A1D23; --ink-2: #4B515C; --muted: #838A97;
+    --accent: #0E8A6B; --accent-soft: #E4F3EE; --fix: #3B6FD8; --fix-soft: #E7EEFC;
+    --sec: #B4790E; --sec-soft: #F8EEDB; --internal: #6B7280; --internal-soft: #EDEFF2;
+    --warn: #C2410C; --warn-soft: #FCEAE0;
+    --shadow: 0 1px 2px rgba(20,24,31,.04), 0 2px 8px rgba(20,24,31,.05);
+    --shadow-lg: 0 8px 30px rgba(20,24,31,.14);
+  }
+  :root[data-theme="dark"] {
+    --ground: #0F1216; --surface: #171B21; --surface-2: #1D222A; --border: #262C34;
+    --border-strong: #333B45; --ink: #E7EAF0; --ink-2: #B4BAC6; --muted: #7E8695;
+    --accent: #34B592; --accent-soft: #123027; --fix: #6D9BF2; --fix-soft: #17233A;
+    --sec: #D9A64A; --sec-soft: #2E2413; --internal: #8C94A2; --internal-soft: #21262E;
+    --warn: #F08A5C; --warn-soft: #331A10;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 2px 10px rgba(0,0,0,.35);
+    --shadow-lg: 0 10px 40px rgba(0,0,0,.55);
+  }
+
+  * { box-sizing: border-box; }
+  .wrap {
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: var(--ground); color: var(--ink); min-height: 100vh;
+    -webkit-font-smoothing: antialiased; line-height: 1.5; padding: 32px 20px 120px;
+  }
+  .container { max-width: 940px; margin: 0 auto; }
+
+  .notice { display: flex; gap: 13px; align-items: flex-start; background: var(--warn-soft); border: 1px solid color-mix(in srgb, var(--warn) 45%, transparent); border-left: 5px solid var(--warn); border-radius: var(--radius); padding: 15px 18px; margin-bottom: 22px; font-size: 14.5px; line-height: 1.55; color: var(--ink); box-shadow: var(--shadow); }
+  .notice-icon { font-size: 22px; line-height: 1.2; flex: none; }
+  .notice-title { font-size: 15.5px; font-weight: 750; color: var(--warn); margin-bottom: 4px; letter-spacing: -.01em; }
+  .notice strong { color: var(--ink); font-weight: 700; }
+  .masthead { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: 24px; }
+  .eyebrow { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin: 0 0 6px; }
+  h1 { font-size: 30px; line-height: 1.1; margin: 0; font-weight: 700; letter-spacing: -.02em; text-wrap: balance; }
+  h1 .date { color: var(--accent); }
+  .masthead .status { text-align: right; font-size: 13px; color: var(--ink-2); }
+  .status .live { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: var(--ink); }
+  .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 22px; }
+  .tile { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px; box-shadow: var(--shadow); }
+  .tile .n { font-size: 26px; font-weight: 700; letter-spacing: -.02em; font-variant-numeric: tabular-nums; line-height: 1; }
+  .tile .l { font-size: 12px; color: var(--muted); margin-top: 6px; font-weight: 500; }
+  .tile.cust .n { color: var(--accent); }
+  .tile.chg .n { color: var(--warn); }
+  @media (max-width: 620px) { .stats { grid-template-columns: repeat(2, 1fr); } h1 { font-size: 25px; } }
+
+  .controls { position: sticky; top: 0; z-index: 5; background: color-mix(in srgb, var(--ground) 88%, transparent); backdrop-filter: blur(8px); padding: 12px 0; margin: 0 -4px 6px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  .seg { display: inline-flex; background: var(--surface-2); border: 1px solid var(--border); border-radius: 9px; padding: 3px; gap: 2px; }
+  .seg button { font: inherit; font-size: 13px; font-weight: 600; border: 0; background: transparent; color: var(--ink-2); padding: 6px 13px; border-radius: 6px; cursor: pointer; transition: background .12s, color .12s; }
+  .seg button .c { font-variant-numeric: tabular-nums; opacity: .6; margin-left: 5px; font-weight: 600; }
+  .seg button[aria-pressed="true"] { background: var(--surface); color: var(--ink); box-shadow: var(--shadow); }
+  .seg button[aria-pressed="true"] .c { opacity: 1; color: var(--accent); }
+  .seg button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .search { flex: 1; min-width: 160px; }
+  .search input { width: 100%; font: inherit; font-size: 13.5px; padding: 8px 12px; border: 1px solid var(--border-strong); border-radius: 8px; background: var(--surface); color: var(--ink); }
+  .search input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
+
+  .area { border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); margin-bottom: 12px; overflow: hidden; box-shadow: var(--shadow); }
+  .area > summary { list-style: none; cursor: pointer; padding: 14px 18px; display: flex; align-items: center; gap: 12px; user-select: none; }
+  .area > summary::-webkit-details-marker { display: none; }
+  .chev { width: 16px; height: 16px; flex: none; color: var(--muted); transition: transform .15s; }
+  .area[open] > summary .chev { transform: rotate(90deg); }
+  .area-name { font-weight: 650; font-size: 15px; }
+  .area-owner { font-size: 12.5px; color: var(--muted); font-weight: 500; }
+  .area-meta { margin-left: auto; display: flex; gap: 10px; align-items: center; }
+  .area-count { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; display: flex; gap: 6px; align-items: center; }
+  .pip { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+  .pip.zero { background: var(--border-strong); }
+  .area-allint { font: inherit; font-size: 11.5px; font-weight: 600; border: 1px solid var(--border-strong); background: var(--surface); color: var(--ink-2); padding: 4px 9px; border-radius: 7px; cursor: pointer; white-space: nowrap; }
+  .area-allint:hover { border-color: var(--internal); color: var(--ink); background: var(--internal-soft); }
+  .area-allint.on { background: var(--internal-soft); border-color: var(--internal); color: var(--ink); }
+  .area-body { padding: 0 18px 8px; border-top: 1px solid var(--border); }
+  .subhead { font-size: 11px; text-transform: uppercase; letter-spacing: .09em; color: var(--muted); font-weight: 700; margin: 16px 0 8px; }
+
+  ul.items { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+  .item { display: flex; gap: 12px; padding: 9px 0; align-items: baseline; border-bottom: 1px solid var(--border); position: relative; }
+  .item:last-child { border-bottom: 0; }
+  .badge { flex: none; font-size: 10.5px; font-weight: 700; letter-spacing: .03em; text-transform: uppercase; padding: 3px 8px; border-radius: 999px; white-space: nowrap; margin-top: 1px; }
+  .b-feature { background: var(--accent-soft); color: var(--accent); }
+  .b-fix { background: var(--fix-soft); color: var(--fix); }
+  .b-sec { background: var(--sec-soft); color: var(--sec); }
+  .b-internal { background: var(--internal-soft); color: var(--internal); }
+  .item .body { flex: 1; min-width: 0; }
+  .item .txt { font-size: 13.5px; color: var(--ink-2); }
+  .item .txt strong { color: var(--ink); font-weight: 600; }
+  .item .key { flex: none; font-size: 12px; font-weight: 600; color: var(--muted); text-decoration: none; font-variant-numeric: tabular-nums; white-space: nowrap; margin-top: 1px; }
+  .item .key:hover { color: var(--accent); text-decoration: underline; }
+
+  /* row actions */
+  .row-actions { display: flex; gap: 4px; flex: none; margin-top: -1px; opacity: .35; transition: opacity .12s; }
+  .item:hover .row-actions, .item.changed .row-actions { opacity: 1; }
+  .row-actions button { font: inherit; font-size: 11px; font-weight: 600; border: 1px solid var(--border); background: var(--surface); color: var(--ink-2); padding: 3px 8px; border-radius: 6px; cursor: pointer; white-space: nowrap; transition: all .1s; }
+  .row-actions button:hover { border-color: var(--border-strong); color: var(--ink); }
+  .row-actions button.on-internal { background: var(--internal-soft); border-color: var(--internal); color: var(--ink); }
+  .row-actions button.on-remove { background: var(--warn-soft); border-color: var(--warn); color: var(--warn); }
+  .row-actions button.on-edit { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+  .row-actions button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+  /* per-row category dropdown — matches the row-action buttons */
+  .cat-select { font: inherit; font-size: 11px; font-weight: 600; border: 1px solid var(--border); background: var(--surface); color: var(--ink-2); padding: 3px 6px; border-radius: 6px; cursor: pointer; max-width: 168px; transition: all .1s; }
+  .cat-select:hover { border-color: var(--border-strong); color: var(--ink); }
+  .cat-select:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .cat-select.on-cat { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+  .cat-select.on-cat-internal { background: var(--internal-soft); border-color: var(--internal); color: var(--ink); }
+  #refresh-btn { }
+
+  .item.changed { }
+  .item.changed::before { content: ""; position: absolute; left: -18px; top: 6px; bottom: 6px; width: 3px; border-radius: 3px; background: var(--warn); }
+  .item.cls-internal .txt { color: var(--muted); }
+  .item.cls-remove .txt { text-decoration: line-through; color: var(--muted); }
+  .chg-note { font-size: 11.5px; font-weight: 600; margin-top: 4px; display: none; }
+  .item.catset .chg-note.n-cat { display: block; color: var(--ink-2); }
+  .item.cls-internal .chg-note.n-cat { color: var(--internal); }
+  .item.cls-remove .chg-note.n-remove { display: block; color: var(--warn); }
+  .item.edited .chg-note.n-edit { display: block; color: var(--accent); }
+
+  .edit-box { display: none; margin-top: 8px; }
+  .item.editing .edit-box { display: block; }
+  .item.editing .txt { display: none; }
+  .edit-box textarea { width: 100%; font: inherit; font-size: 13px; line-height: 1.45; padding: 8px 10px; border: 1px solid var(--accent); border-radius: 8px; background: var(--surface); color: var(--ink); resize: vertical; min-height: 54px; }
+  .edit-box .eb-actions { display: flex; gap: 6px; margin-top: 6px; }
+  .edit-box .eb-actions button { font: inherit; font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 7px; cursor: pointer; border: 1px solid var(--border-strong); background: var(--surface); color: var(--ink-2); }
+  .edit-box .eb-actions button.save { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+  .cluster { border: 1px dashed var(--border-strong); border-radius: 8px; margin: 8px 0; background: var(--surface-2); }
+  .cluster > summary { list-style: none; cursor: pointer; padding: 10px 14px; display: flex; gap: 10px; align-items: center; font-size: 13px; font-weight: 600; color: var(--ink-2); }
+  .cluster > summary::-webkit-details-marker { display: none; }
+  .cluster[open] > summary .chev { transform: rotate(90deg); }
+  .cluster .cluster-body { padding: 2px 14px 8px; }
+  .cluster .item { font-size: 13px; }
+  .cluster .item.changed::before { left: -14px; }
+
+  .empty { text-align: center; color: var(--muted); font-size: 14px; padding: 40px 0; display: none; }
+
+  /* compose bar */
+  .composebar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; display: flex; justify-content: center; padding: 14px 20px; pointer-events: none; transform: translateY(120%); transition: transform .2s ease; }
+  .composebar.show { transform: translateY(0); }
+  .composebar .inner { pointer-events: auto; display: flex; align-items: center; gap: 16px; background: var(--surface); border: 1px solid var(--border-strong); box-shadow: var(--shadow-lg); border-radius: 12px; padding: 10px 12px 10px 18px; max-width: 940px; width: 100%; }
+  .composebar .count { font-size: 13.5px; color: var(--ink-2); font-weight: 500; }
+  .composebar .count b { color: var(--warn); font-variant-numeric: tabular-nums; }
+  .composebar .spacer { flex: 1; }
+  .composebar .ghost { font: inherit; font-size: 13px; font-weight: 600; border: 0; background: transparent; color: var(--muted); cursor: pointer; padding: 8px 10px; border-radius: 8px; }
+  .composebar .ghost:hover { color: var(--ink); }
+  .composebar .primary { font: inherit; font-size: 13.5px; font-weight: 650; border: 0; background: var(--accent); color: #fff; cursor: pointer; padding: 10px 18px; border-radius: 9px; box-shadow: var(--shadow); }
+  .composebar .primary:hover { filter: brightness(1.05); }
+  .composebar .primary:focus-visible, .composebar .ghost:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  /* modal */
+  .modal-scrim { position: fixed; inset: 0; z-index: 40; background: rgba(15,18,22,.5); display: none; align-items: center; justify-content: center; padding: 24px; }
+  .modal-scrim.show { display: flex; }
+  .modal { background: var(--surface); border: 1px solid var(--border-strong); border-radius: 14px; box-shadow: var(--shadow-lg); width: 100%; max-width: 620px; max-height: 84vh; display: flex; flex-direction: column; overflow: hidden; }
+  .modal header { padding: 18px 20px 12px; border-bottom: 1px solid var(--border); }
+  .modal header h3 { margin: 0; font-size: 16px; font-weight: 700; letter-spacing: -.01em; }
+  .modal header p { margin: 4px 0 0; font-size: 12.5px; color: var(--muted); }
+  .modal .mbody { padding: 16px 20px; overflow-y: auto; }
+  .modal textarea { width: 100%; font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 12.5px; line-height: 1.6; padding: 14px; border: 1px solid var(--border-strong); border-radius: 10px; background: var(--surface-2); color: var(--ink); resize: vertical; min-height: 180px; white-space: pre; overflow-x: auto; }
+  .modal .empty-note { font-size: 13px; color: var(--muted); text-align: center; padding: 30px 0; }
+  .modal footer { padding: 14px 20px; border-top: 1px solid var(--border); display: flex; gap: 10px; align-items: center; }
+  .modal footer .hint { font-size: 12px; color: var(--muted); flex: 1; }
+  .modal footer button { font: inherit; font-size: 13.5px; font-weight: 650; border-radius: 9px; padding: 9px 16px; cursor: pointer; border: 1px solid var(--border-strong); background: var(--surface); color: var(--ink-2); }
+  .modal footer button.copy { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .modal footer button.copy.done { background: var(--fix); border-color: var(--fix); }
+
+  .foot { margin-top: 26px; font-size: 12px; color: var(--muted); text-align: center; line-height: 1.7; }
+  .foot code { background: var(--surface-2); padding: 1px 6px; border-radius: 5px; font-size: 11.5px; }
+  .hidden { display: none !important; }
+
+  /* 1. release queue link in area header */
+  .area-queue { font-size: 11.5px; font-weight: 600; color: var(--accent); text-decoration: none; padding: 3px 9px; border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent); border-radius: 6px; white-space: nowrap; }
+  .area-queue:hover { background: var(--accent-soft); }
+
+  /* 2. excluded tickets section */
+  .excluded-section { margin-top: 8px; border: 1px dashed var(--border-strong); border-radius: 8px; background: var(--surface-2); }
+  .excluded-section > summary { list-style: none; cursor: pointer; padding: 8px 14px; font-size: 12px; font-weight: 600; color: var(--muted); display: flex; gap: 8px; align-items: center; }
+  .excluded-section > summary::-webkit-details-marker { display: none; }
+  .excluded-section[open] > summary .chev { transform: rotate(90deg); }
+  .excl-body { padding: 4px 14px 10px; }
+  .excl-item { font-size: 12.5px; color: var(--muted); padding: 5px 0; border-bottom: 1px solid var(--border); display: flex; gap: 10px; align-items: baseline; }
+  .excl-item:last-child { border-bottom: 0; }
+  .excl-key { font-size: 11.5px; font-weight: 600; color: var(--muted); text-decoration: none; white-space: nowrap; flex: none; }
+  .excl-key:hover { color: var(--accent); text-decoration: underline; }
+  .excl-reason { font-size: 12px; flex: 1; }
+
+  /* 3. blog HTML copy button */
+  .blog-btn { font: inherit; font-size: 13px; font-weight: 600; border: 1px solid var(--border-strong); background: var(--surface); color: var(--ink-2); padding: 7px 13px; border-radius: 8px; cursor: pointer; white-space: nowrap; }
+  .blog-btn:hover { border-color: var(--fix); color: var(--fix); background: var(--fix-soft); }
+  .blog-btn.done { background: var(--fix-soft); border-color: var(--fix); color: var(--fix); }
+</style>
+
+<title>Method Release Notes Review</title>
+<div class="wrap">
+  <div class="container">
+
+    <div class="masthead">
+      <div>
+        <p class="eyebrow">Method · Release Review</p>
+        <h1>Ship notes — <span class="date">September 8</span></h1>
+      </div>
+      <div class="status">
+        <div class="live"><span class="dot"></span>Draft · awaiting PM sign-off</div>
+        <div style="margin-top:4px;"><span id="masthead-areas"></span> · generated from release queue</div>
+      </div>
+    </div>
+
+    <div class="notice">
+      <span class="notice-icon">⚠️</span>
+      <div>
+        <div class="notice-title">Your changes here don't reach Slack on their own</div>
+        Mark tickets Internal / Remove / edit their text, then hit <strong>Generate reply</strong> and
+        <strong>paste it into the Slack thread</strong> — that's the only thing that actually requests the change.
+        Anything you mark on this page is local to your screen and isn't saved until you post it in Slack.
+      </div>
+    </div>
+
+    <div class="stats" id="stats">
+      <div class="tile"><div class="n" id="stat-total">0</div><div class="l">Total items</div></div>
+      <div class="tile cust"><div class="n" id="stat-cust">0</div><div class="l">Customer-facing</div></div>
+      <div class="tile"><div class="n" id="stat-int">0</div><div class="l">Internal only</div></div>
+      <div class="tile chg"><div class="n" id="stat-chg">0</div><div class="l">Your changes</div></div>
+    </div>
+
+    <div class="controls">
+      <div class="seg" role="group" aria-label="Filter by audience">
+        <button data-filter="all" aria-pressed="true">All <span class="c" id="c-all">0</span></button>
+        <button data-filter="customer" aria-pressed="false">Customer <span class="c" id="c-cust">0</span></button>
+        <button data-filter="internal" aria-pressed="false">Internal <span class="c" id="c-int">0</span></button>
+      </div>
+      <div class="search"><input type="search" id="search" placeholder="Filter by keyword, area, or ticket…" aria-label="Search release items"></div>
+      <button class="blog-btn" id="refresh-btn" title="Reload the latest notes for today">↻ Refresh</button>
+      <button class="blog-btn" id="blog-copy-btn">📋 Copy blog HTML</button>
+    </div>
+
+    <div id="areas"></div>
+    <div class="empty" id="empty">Nothing matches that filter.</div>
+
+    <p class="foot">
+      Built from the release thread — nothing is saved here; changes only take effect once you paste them into Slack.<br>
+      Bot grammar: <code>Method Notes Changes: KEY - …</code> · no reply needed if it all looks good — it publishes as-is at the cutoff.
+    </p>
+  </div>
+</div>
+
+<!-- Compose bar -->
+<div class="composebar" id="composebar">
+  <div class="inner">
+    <span class="count"><b id="cb-count">0</b> <span id="cb-word">changes</span> staged</span>
+    <span class="spacer"></span>
+    <button class="ghost" id="cb-clear">Clear all</button>
+    <button class="primary" id="cb-generate">Generate reply →</button>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal-scrim" id="scrim">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <header>
+      <h3 id="modal-title">Correction reply</h3>
+      <p><strong>Copy this and paste it as a reply in the Slack release thread</strong> — that's the only way the change is requested. The bot applies it automatically and the notes publish at the cutoff.</p>
+    </header>
+    <div class="mbody">
+      <textarea id="output" spellcheck="false" aria-label="Generated correction reply"></textarea>
+      <div class="empty-note hidden" id="output-empty">No changes staged yet. Pick a <b>category</b>, mark items <b>Remove</b>, or <b>Edit</b> their text first.</div>
+    </div>
+    <footer>
+      <span class="hint" id="modal-hint"></span>
+      <button id="modal-close">Close</button>
+      <button class="copy" id="modal-copy">Copy to clipboard</button>
+    </footer>
+  </div>
+</div>
+
+<script>
+(async function () {
+
+  // Live data: on GitHub Pages we fetch the current notes.json (same-origin) so the page always
+  // reflects today's release the instant the workflow republishes it — that's what powers the
+  // Refresh button. On the Claude artifact the strict CSP blocks the fetch, so we fall back to
+  // the notes baked into this file at publish time. `sig` lets the poller detect fresh notes.
+  let AREAS = [{"name":"Phil Côté","short":"CRM Experience","owner":"CRM Experience","queues":["https://miurl.cc/a5zbjoZmI"],"items":[{"k":"PL-64991","audience":"customer","kind":"fix","t":"<strong>Invoices</strong> — Fixed an issue where invoice email details showed a previously sent proposal's template."},{"k":"PL-65220","audience":"customer","kind":"feature","t":"<strong>Editable Grid</strong> — Redesigned card column configuration in the Editable Grid with per-field formatting options."},{"k":"PL-63578","audience":"internal","kind":"internal","t":"<strong>Layout Rendering</strong> — Fixed a recurring ResizeObserver error triggered by grid and other layout components."},{"k":"PL-64103","audience":"customer","kind":"feature","t":"<strong>Insights tile</strong> — Enhanced Refresh Controls to also update the Insights tile without reloading the screen."},{"k":"PL-64046","audience":"internal","kind":"internal","t":"<strong>Email public pages</strong> — Enabled monitoring to catch errors on the public unsubscribe and verify pages."}],"excluded":[]},{"name":"John Miranda","short":"Vertical App Experience","owner":"Vertical App Experience","queues":["https://miurl.cc/lLXder6mI"],"items":[{"k":"PL-62866","audience":"internal","kind":"internal","t":"<strong>Analytics</strong> — Migrated backend analytics event delivery from HTTP to Amazon SQS for reliability."}],"excluded":[{"k":"PL-63560","reason":"dark project — Inventory Management"},{"k":"PL-64417","reason":"dark project — Inventory Management"},{"k":"PL-62076","reason":"dark project — Inventory Management (inv-so-po-shared label)"}]},{"name":"Arshi Sayed","short":"Connect","owner":"Connect / Admin","queues":["https://miurl.cc/XaXbr3ymI","https://miurl.cc/qbA8eGZmI"],"items":[{"k":"PL-65455","audience":"customer","kind":"fix","t":"<strong>QuickBooks Desktop</strong> — Fixed an issue where taxable QuickBooks Desktop customers weren't getting tax calculated on estimates."},{"k":"PL-64487","audience":"customer","kind":"fix","t":"<strong>Xero</strong> — Fixed an issue where Xero's Full Sync button performed only a changes-only sync."},{"k":"PL-62969","audience":"internal","kind":"internal","t":"<strong>LegacyBre</strong> — Refactored legacy business-rule cleanup logic into per-table handlers, removing the old switch statement."},{"k":"PL-65219","audience":"customer","kind":"fix","t":"<strong>Tables &amp; Fields</strong> — Fixed an issue where a custom field on the Users table stopped saving values."},{"k":"PL-64810","audience":"internal","kind":"internal","t":"<strong>User Management</strong> — Added server-side eligibility checks and monitoring for Field Crew/Lite role assignment."}],"excluded":[]},{"name":"Courtney Riddell","short":"Growth","owner":"Growth","queues":["https://miurl.cc/V6XdGodmI"],"items":[{"k":"GROW-563","audience":"internal","kind":"internal","t":"<strong>Analytics</strong> — Fixed a backend error that could block user profile syncing to analytics tools."}],"excluded":[]}];
+  let sig = "";
+  try {
+    const r = await fetch("notes.json", { cache: "no-store" });
+    if (r.ok) {
+      const j = await r.json();
+      if (j && Array.isArray(j.areas)) { AREAS = j.areas; sig = JSON.stringify(j); }
+      if (j && j.label) { const d = document.querySelector("h1 .date"); if (d) d.textContent = j.label; }
+    }
+  } catch (e) { /* Claude artifact / offline → keep the baked fallback */ }
+  const J = "https://method.atlassian.net/browse/";
+
+  const BADGE = { feature:["b-feature","Feature"], fix:["b-fix","Fix"], sec:["b-sec","Security"], internal:["b-internal","Internal"] };
+  const all = AREAS.flatMap(a => a.items);
+  const byKey = {}; all.forEach(i => byKey[i.k] = i);
+  const strip = html => { const d = document.createElement("div"); d.innerHTML = html; return d.textContent.replace(/\s+/g, " ").trim(); };
+
+  // Category catalogue. `id` is stored in state, `label` shows in the dropdown,
+  // `phrase` is what buildReply() emits after "move to", and `internal` drives the dim styling.
+  const CATEGORIES = [
+    { id: "customer_new_capability",   label: "New Capability (Customer)", phrase: "Customer - New Capability",           internal: false },
+    { id: "customer_enhancement",      label: "Enhancement (Customer)",    phrase: "Customer - Enhancement",              internal: false },
+    { id: "customer_fix",              label: "Fix (Customer)",            phrase: "Customer - Fix",                      internal: false },
+    { id: "internal_infrastructure",   label: "Infrastructure (Internal)", phrase: "Internal - Infrastructure",           internal: true  },
+    { id: "internal_code_health",      label: "Code Health (Internal)",    phrase: "Internal - Code Health",              internal: true  },
+    { id: "internal_security",         label: "Security (Internal)",       phrase: "Internal - Security and Compliance",  internal: true  },
+  ];
+  const CAT_BY_ID = {}; CATEGORIES.forEach(c => CAT_BY_ID[c.id] = c);
+
+  // change state: key -> { cat: <categoryId>|null, remove: boolean, text: string|null }
+  // cat (category), remove, and text (rewrite) are INDEPENDENT axes — they stack.
+  const changes = {};
+  const get = key => changes[key] || (changes[key] = { cat: null, remove: false, text: null });
+  const prune = key => { const c = changes[key]; if (c && !c.cat && !c.remove && !c.text) delete changes[key]; };
+
+
+  const nCust = all.filter(i => i.audience === "customer").length;
+  document.getElementById("stat-total").textContent = all.length;
+  document.getElementById("masthead-areas").textContent = AREAS.length + " areas";
+  document.getElementById("stat-cust").textContent = nCust;
+  document.getElementById("stat-int").textContent = all.length - nCust;
+  document.getElementById("c-all").textContent = all.length;
+  document.getElementById("c-cust").textContent = nCust;
+  document.getElementById("c-int").textContent = all.length - nCust;
+
+  function itemRow(i) {
+    const [cls, label] = BADGE[i.kind];
+    const li = document.createElement("li");
+    li.className = "item";
+    li.dataset.audience = i.audience;
+    li.dataset.key = i.k;
+    li.dataset.search = (strip(i.t) + " " + i.k).toLowerCase();
+    const catOptions =
+      `<option value="">(keep category)</option>` +
+      CATEGORIES.map(c => `<option value="${c.id}">${c.label}</option>`).join("");
+    li.innerHTML =
+      `<span class="badge ${cls}">${label}</span>` +
+      `<div class="body">` +
+        `<div class="txt">${i.t}</div>` +
+        `<div class="chg-note n-cat">↳ will post: move to …</div>` +
+        `<div class="chg-note n-remove">↳ will post: remove from notes</div>` +
+        `<div class="chg-note n-edit">↳ text edited</div>` +
+        `<div class="edit-box">` +
+          `<textarea aria-label="Edit note text">${strip(i.t)}</textarea>` +
+          `<div class="eb-actions"><button class="save">Save</button><button class="cancel">Cancel</button></div>` +
+        `</div>` +
+      `</div>` +
+      `<a class="key" href="${J}${i.k}" target="_blank" rel="noopener">${i.k}</a>` +
+      `<div class="row-actions">` +
+        `<select class="cat-select" title="Reclassify this ticket's category" aria-label="Category for ${i.k}">${catOptions}</select>` +
+        `<button data-act="remove" title="Drop from customer notes">Remove</button>` +
+        `<button data-act="edit" title="Rewrite the note text">Edit ✎</button>` +
+      `</div>`;
+    return li;
+  }
+
+  const areasEl = document.getElementById("areas");
+  AREAS.forEach(area => {
+    const det = document.createElement("details");
+    det.className = "area"; det.open = true; det.dataset.area = area.short;
+
+    const cCust = area.items.filter(i => i.audience === "customer").length;
+    const sum = document.createElement("summary");
+    // 1. Release queue link(s) in the area header
+    const queueLinks = (area.queues || []).map((q, qi) =>
+      `<a class="area-queue" href="${q}" target="_blank" rel="noopener">🔗 ${(area.queues||[]).length > 1 ? "Release queue " + (qi+1) : "Release queue"}</a>`
+    ).join(" ");
+    sum.innerHTML =
+      `<svg class="chev" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>` +
+      `<span class="area-name">${area.name}</span><span class="area-owner">${area.owner}</span>` +
+      `<span class="area-meta">` +
+        (queueLinks ? queueLinks + " " : "") +
+        `<span class="area-count"><span class="pip ${cCust ? "" : "zero"}"></span>${cCust} customer · ${area.items.length} total</span>` +
+        `<button class="area-allint" title="Mark this whole area internal">Mark all internal</button>` +
+      `</span>`;
+    det.appendChild(sum);
+
+    const body = document.createElement("div");
+    body.className = "area-body";
+    const loose = area.items.filter(i => !i.cluster);
+    const clusters = {};
+    area.items.filter(i => i.cluster).forEach(i => (clusters[i.cluster] = clusters[i.cluster] || []).push(i));
+
+    if (loose.length) {
+      const ul = document.createElement("ul"); ul.className = "items";
+      loose.forEach(i => ul.appendChild(itemRow(i)));
+      body.appendChild(ul);
+    }
+    Object.entries(clusters).forEach(([name, items]) => {
+      const cd = document.createElement("details"); cd.className = "cluster";
+      cd.innerHTML = `<summary><svg class="chev" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>${name} — ${items.length} view &amp; filter fixes <span style="color:var(--muted);font-weight:500;margin-left:auto">all internal · click to expand</span></summary>`;
+      const cbody = document.createElement("div"); cbody.className = "cluster-body";
+      const ul = document.createElement("ul"); ul.className = "items";
+      items.forEach(i => ul.appendChild(itemRow(i)));
+      cbody.appendChild(ul); cd.appendChild(cbody); body.appendChild(cd);
+    });
+    // 2. Excluded tickets section
+    const excl = area.excluded || [];
+    if (excl.length) {
+      const exclDet = document.createElement("details");
+      exclDet.className = "excluded-section";
+      exclDet.innerHTML = `<summary><svg class="chev" viewBox="0 0 16 16" fill="none"><path d="M6 4l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>🚫 ${excl.length} excluded from notes — click to see why</summary>`;
+      const exclBody = document.createElement("div");
+      exclBody.className = "excl-body";
+      excl.forEach(ex => {
+        const div = document.createElement("div");
+        div.className = "excl-item";
+        div.innerHTML = `<a class="excl-key" href="${J}${ex.k}" target="_blank" rel="noopener">${ex.k}</a><span class="excl-reason">${ex.reason || "excluded"}</span>`;
+        exclBody.appendChild(div);
+      });
+      exclDet.appendChild(exclBody);
+      body.appendChild(exclDet);
+    }
+
+    det.appendChild(body);
+    areasEl.appendChild(det);
+  });
+
+  // ---- change handling ----
+  // Category, Remove, and text edits are independent — setting one never clears the others.
+  function setCategory(key, catId) {
+    const c = get(key);
+    c.cat = catId || null; // "" (keep category) clears it
+    prune(key);
+    render();
+  }
+  function toggleRemove(key) {
+    const c = get(key);
+    c.remove = !c.remove;
+    prune(key);
+    render();
+  }
+  function openEditor(key) {
+    const li = document.querySelector(`.item[data-key="${key}"]`);
+    li.classList.add("editing");
+    const ta = li.querySelector(".edit-box textarea");
+    ta.focus(); ta.setSelectionRange(ta.value.length, ta.value.length);
+  }
+  function commitEdit(key, text) {
+    const orig = strip(byKey[key].t);
+    const li = document.querySelector(`.item[data-key="${key}"]`);
+    const c = get(key);
+    if (!text.trim() || text.trim() === orig) { c.text = null; li.querySelector(".txt").textContent = orig; }
+    else { c.text = text.trim(); li.querySelector(".txt").textContent = c.text; }
+    prune(key);
+    li.classList.remove("editing");
+    render();
+  }
+
+  function render() {
+    document.querySelectorAll(".item").forEach(li => {
+      const key = li.dataset.key;
+      const c = changes[key];
+      li.classList.remove("changed","cls-internal","cls-remove","catset","edited");
+      const sel = li.querySelector(".cat-select");
+      sel.classList.remove("on-cat","on-cat-internal");
+      li.querySelectorAll(".row-actions button").forEach(b => b.classList.remove("on-remove","on-edit"));
+      // Restore the dropdown selection on every render.
+      sel.value = (c && c.cat) || "";
+      if (c) {
+        li.classList.add("changed");
+        if (c.cat) {
+          const cat = CAT_BY_ID[c.cat];
+          li.classList.add("catset");
+          li.querySelector(".chg-note.n-cat").textContent = "↳ will post: move to " + (cat ? cat.phrase : c.cat);
+          if (cat && cat.internal) { li.classList.add("cls-internal"); sel.classList.add("on-cat-internal"); }
+          else { sel.classList.add("on-cat"); }
+        }
+        if (c.remove) {
+          li.classList.add("cls-remove");
+          li.querySelector(".row-actions button[data-act=\"remove\"]").classList.add("on-remove");
+        }
+        if (c.text) {
+          li.classList.add("edited");
+          li.querySelector(".row-actions button[data-act=\"edit\"]").classList.add("on-edit");
+        }
+      }
+    });
+    // area "Mark all internal" button state — true when every row is set to internal_infrastructure
+    document.querySelectorAll(".area").forEach(area => {
+      const keys = [...area.querySelectorAll(".item")].map(li => li.dataset.key);
+      const allInt = keys.length && keys.every(k => changes[k] && changes[k].cat === "internal_infrastructure");
+      const b = area.querySelector(".area-allint");
+      b.classList.toggle("on", allInt);
+      b.textContent = allInt ? "✓ All internal" : "Mark all internal";
+    });
+    const n = Object.keys(changes).length;
+    document.getElementById("stat-chg").textContent = n;
+    document.getElementById("cb-count").textContent = n;
+    document.getElementById("cb-word").textContent = n === 1 ? "ticket" : "tickets";
+    document.getElementById("composebar").classList.toggle("show", n > 0);
+  }
+
+  document.getElementById("areas").addEventListener("click", e => {
+    const actBtn = e.target.closest(".row-actions button");
+    if (actBtn) {
+      e.preventDefault();
+      const key = actBtn.closest(".item").dataset.key;
+      if (actBtn.dataset.act === "edit") openEditor(key);
+      else if (actBtn.dataset.act === "remove") toggleRemove(key);
+      return;
+    }
+    const save = e.target.closest(".edit-box .save");
+    if (save) { const li = save.closest(".item"); commitEdit(li.dataset.key, li.querySelector("textarea").value); return; }
+    const cancel = e.target.closest(".edit-box .cancel");
+    if (cancel) { const li = cancel.closest(".item"); li.classList.remove("editing"); li.querySelector("textarea").value = (changes[li.dataset.key] && changes[li.dataset.key].text) || strip(byKey[li.dataset.key].t); return; }
+    const allInt = e.target.closest(".area-allint");
+    if (allInt) {
+      e.preventDefault();
+      const area = allInt.closest(".area");
+      const keys = [...area.querySelectorAll(".item")].map(li => li.dataset.key);
+      const turningOn = !allInt.classList.contains("on");
+      keys.forEach(k => { if (turningOn) get(k).cat = "internal_infrastructure"; else if (changes[k]) changes[k].cat = null; prune(k); });
+      render();
+    }
+  });
+
+  // Category dropdown (delegated change event).
+  document.getElementById("areas").addEventListener("change", e => {
+    const sel = e.target.closest(".cat-select");
+    if (!sel) return;
+    setCategory(sel.closest(".item").dataset.key, sel.value);
+  });
+
+  // ---- compose ----
+  function buildReply() {
+    const lines = [];
+    AREAS.forEach(area => {
+      area.items.forEach(i => {
+        const k = i.k;
+        const c = changes[k];
+        if (!c) return;
+        // category / remove axis (mutually exclusive per line — remove wins)
+        if (c.remove) lines.push(`Method Notes Changes: ${k} - Remove from notes`);
+        else if (c.cat) {
+          const cat = CAT_BY_ID[c.cat];
+          lines.push(`Method Notes Changes: ${k} - move to ${cat ? cat.phrase : c.cat}`);
+        }
+        // text axis — stacks on top of a category; suppressed if the ticket is being removed
+        if (c.text && !c.remove) lines.push(`Method Notes Changes: ${k} - ${c.text}`);
+      });
+    });
+    return lines.join("\n");
+  }
+
+  const scrim = document.getElementById("scrim");
+  const output = document.getElementById("output");
+  const outEmpty = document.getElementById("output-empty");
+  const copyBtn = document.getElementById("modal-copy");
+  const hint = document.getElementById("modal-hint");
+
+  function openModal() {
+    const text = buildReply();
+    const n = Object.keys(changes).length;
+    if (!n) { output.classList.add("hidden"); outEmpty.classList.remove("hidden"); copyBtn.disabled = true; hint.textContent = ""; }
+    else {
+      output.classList.remove("hidden"); outEmpty.classList.add("hidden"); copyBtn.disabled = false;
+      output.value = text;
+      const lineCount = text.split("\n").length;
+      hint.textContent = `${lineCount} line${lineCount>1?"s":""} · ${n} ticket${n>1?"s":""} affected`;
+      output.style.height = "auto"; output.style.height = Math.min(output.scrollHeight + 4, 340) + "px";
+    }
+    scrim.classList.add("show");
+    copyBtn.classList.remove("done"); copyBtn.textContent = "Copy to clipboard";
+  }
+  function closeModal() { scrim.classList.remove("show"); }
+
+  document.getElementById("cb-generate").addEventListener("click", openModal);
+  document.getElementById("modal-close").addEventListener("click", closeModal);
+  scrim.addEventListener("click", e => { if (e.target === scrim) closeModal(); });
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && scrim.classList.contains("show")) closeModal(); });
+
+  document.getElementById("cb-clear").addEventListener("click", () => {
+    for (const k in changes) delete changes[k];
+    document.querySelectorAll(".item.editing").forEach(li => li.classList.remove("editing"));
+    render();
+  });
+
+  copyBtn.addEventListener("click", async () => {
+    const text = output.value;
+    let ok = false;
+    try { await navigator.clipboard.writeText(text); ok = true; }
+    catch (_) { output.select(); try { ok = document.execCommand("copy"); } catch (e) { ok = false; } }
+    copyBtn.classList.add("done");
+    copyBtn.textContent = ok ? "✓ Copied — paste in the thread" : "Select the text above & copy";
+  });
+
+  // ---- filter ----
+  let filter = "all", query = "";
+  const empty = document.getElementById("empty");
+  function apply() {
+    let anyVisible = false;
+    document.querySelectorAll(".area").forEach(area => {
+      let vis = 0;
+      area.querySelectorAll(".item").forEach(item => {
+        const okAud = filter === "all" || item.dataset.audience === filter;
+        const okQ = !query || item.dataset.search.includes(query);
+        const show = okAud && okQ;
+        item.classList.toggle("hidden", !show);
+        if (show) vis++;
+      });
+      area.querySelectorAll(".cluster").forEach(cl => {
+        const v = cl.querySelectorAll(".item:not(.hidden)").length;
+        cl.classList.toggle("hidden", v === 0);
+        if (query && v > 0) cl.open = true;
+      });
+      area.classList.toggle("hidden", vis === 0);
+      if (vis > 0) anyVisible = true;
+    });
+    empty.style.display = anyVisible ? "none" : "block";
+  }
+  document.querySelectorAll(".seg button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".seg button").forEach(b => b.setAttribute("aria-pressed", "false"));
+      btn.setAttribute("aria-pressed", "true");
+      filter = btn.dataset.filter; apply();
+    });
+  });
+  document.getElementById("search").addEventListener("input", e => { query = e.target.value.trim().toLowerCase(); apply(); });
+
+  // 3. Blog HTML generator
+  function buildBlogHtml() {
+    const ORDER = ["feature", "fix"];
+    const SECTION = { feature: "New Capabilities", fix: "Fixes" };
+    const bySection = {};
+    AREAS.forEach(area => {
+      area.items.forEach(it => {
+        const chg = changes[it.k];
+        if (it.audience !== "customer") return;
+        // Skip anything the reviewer removed or reclassified into an internal category.
+        if (chg && (chg.remove || (chg.cat && CAT_BY_ID[chg.cat] && CAT_BY_ID[chg.cat].internal))) return;
+        const k = ORDER.includes(it.kind) ? it.kind : "fix";
+        (bySection[k] = bySection[k] || []).push({ it, chg });
+      });
+    });
+    const parts = ["<p>The following updates are now live for users of Method</p>"];
+    ORDER.forEach(k => {
+      if (!bySection[k]) return;
+      parts.push(`<p><strong>${SECTION[k]}</strong></p>`, "<ul>");
+      bySection[k].forEach(({ it, chg }) => {
+        const txt = (chg && chg.text) ? chg.text : strip(it.t);
+        const safe = txt.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        parts.push(`<li>${safe} (${it.k})</li>`);
+      });
+      parts.push("</ul>");
+    });
+    parts.push("<p>Regards,</p>", "<p></p>");
+    return parts.join("\n");
+  }
+  const blogBtn = document.getElementById("blog-copy-btn");
+  blogBtn.addEventListener("click", async () => {
+    const html = buildBlogHtml();
+    let ok = false;
+    try { await navigator.clipboard.writeText(html); ok = true; }
+    catch (_) {
+      const ta = document.createElement("textarea");
+      ta.value = html; document.body.appendChild(ta); ta.select();
+      try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+      document.body.removeChild(ta);
+    }
+    blogBtn.classList.add("done");
+    blogBtn.textContent = ok ? "✓ Copied!" : "Select & copy above";
+    setTimeout(() => { blogBtn.classList.remove("done"); blogBtn.textContent = "📋 Copy blog HTML"; }, 2500);
+  });
+
+  // Refresh: reload to pull the latest notes.json. (On the Claude artifact there's no notes.json,
+  // so this just reloads the same baked page — harmless.)
+  const refreshBtn = document.getElementById("refresh-btn");
+  refreshBtn.addEventListener("click", () => location.reload());
+
+  // Gentle auto-check: every 60s see if the published notes changed. If they did, nudge the
+  // Refresh button instead of reloading — so a PM mid-edit never loses staged changes.
+  if (sig) {
+    setInterval(async () => {
+      try {
+        const r = await fetch("notes.json", { cache: "no-store" });
+        if (!r.ok) return;
+        const j = await r.json();
+        if (JSON.stringify(j) !== sig) {
+          refreshBtn.textContent = "🔄 New notes — Refresh";
+          refreshBtn.classList.add("done");
+        }
+      } catch (e) { /* ignore transient network errors */ }
+    }, 60000);
+  }
+
+  render();
+})();
+</script>
