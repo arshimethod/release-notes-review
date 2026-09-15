@@ -1,0 +1,362 @@
+{
+  "label": "September 16",
+  "areas": [
+    {
+      "name": "John Miranda",
+      "short": "Vertical App Experience",
+      "owner": "Vertical App Experience",
+      "queues": [
+        "https://miurl.cc/Lq8Xe1MmI"
+      ],
+      "items": [
+        {
+          "k": "PL-64209",
+          "audience": "customer",
+          "kind": "feature",
+          "t": "<strong>Sales Orders</strong> — Added new status filters and a Type column to the Sales Order list."
+        },
+        {
+          "k": "PL-64210",
+          "audience": "customer",
+          "kind": "feature",
+          "t": "<strong>Purchase Orders</strong> — Added new status filters and a Type column to the Purchase Order list."
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "name": "Michael Melo",
+      "short": "No Code Next Gen",
+      "owner": "No Code Next Gen",
+      "queues": [
+        "https://miurl.cc/6XAMr5RmI"
+      ],
+      "items": [
+        {
+          "k": "NCNG-2194",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Dropdown</strong> — Fixed dropdowns showing \"-1\" instead of blank after Clear Screen For New Entry."
+        },
+        {
+          "k": "NCNG-2188",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Runtime</strong> — Fixed a control's disabled state set during screen load being overwritten by its designed state."
+        },
+        {
+          "k": "NCNG-2185",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>App Builder</strong> — Fixed Undo not reverting a screen background color change."
+        },
+        {
+          "k": "NCNG-2182",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>App Builder</strong> — Fixed the Table picker saving the previous dropdown's table instead of the newly selected one."
+        },
+        {
+          "k": "NCNG-2174",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Container</strong> — Fixed the screen background color not showing behind containers on mobile."
+        },
+        {
+          "k": "NCNG-2173",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Container</strong> — Fixed flex containers showing internal scrollbars even when their height was fixed."
+        },
+        {
+          "k": "NCNG-2154",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>App Builder</strong> — Removed the 40-row height cap on Tabs components."
+        },
+        {
+          "k": "NCNG-2151",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Container</strong> — Fixed insufficient spacing between a bordered flex container's border and its components."
+        },
+        {
+          "k": "NCNG-2150",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Container</strong> — Fixed uneven padding around a bordered grid container's contents."
+        },
+        {
+          "k": "NCNG-2145",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Address Lookup</strong> — Fixed the Address lookup suggestion list being clipped inside a container."
+        },
+        {
+          "k": "NCNG-2135",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>App Builder</strong> — Added Storybook test coverage for the V4 radio button components."
+        },
+        {
+          "k": "NCNG-2113",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Dropdown</strong> — Fixed changing a dropdown's Display value from adding the old field as a subtitle."
+        },
+        {
+          "k": "NCNG-2099",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>App Builder</strong> — Fixed missing spacing below a horizontal radio group on the Add Field screen."
+        },
+        {
+          "k": "NCNG-2095",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>App Builder</strong> — Fixed the Attachments component rendering with extra empty space."
+        },
+        {
+          "k": "NCNG-2017",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Label</strong> — Fixed date and time labels not following the account's Display settings format."
+        },
+        {
+          "k": "NCNG-2009",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Chart</strong> — Fixed the chart drilldown focus shadow misaligning with the canvas."
+        },
+        {
+          "k": "NCNG-1997",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Label</strong> — Fixed a Label's icon being misaligned with its text."
+        },
+        {
+          "k": "NCNG-1946",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>App Builder</strong> — Fixed copying a screen opening the legacy Designer instead of App Builder."
+        },
+        {
+          "k": "NCNG-1913",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Runtime Customization</strong> — Polished the visual design of the Customize pill and menu."
+        },
+        {
+          "k": "NCNG-1886",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>App Builder</strong> — Added auto-scrolling in App Builder when dragging components near the canvas edge."
+        },
+        {
+          "k": "NCNG-1811",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Tables &amp; Fields</strong> — Fixed new tables and fields being incorrectly labeled as custom source in TemplateDevV2."
+        },
+        {
+          "k": "NCNG-1782",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>App Builder</strong> — Restored component selection after undo and redo in App Builder."
+        },
+        {
+          "k": "NCNG-1716",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Method AI</strong> — Added the ability to create dropdown fields bound to existing tables via Method AI."
+        },
+        {
+          "k": "NCNG-1704",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>App Builder</strong> — Fixed control selection not working while a dropdown's options list was open."
+        },
+        {
+          "k": "NCNG-1541",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Signature</strong> — Fixed missing required-field indicators on Signature components."
+        },
+        {
+          "k": "NCNG-1513",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Runtime</strong> — Reduced the delay before dynamic-height components grow at runtime."
+        },
+        {
+          "k": "NCNG-1468",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>App Builder</strong> — "
+        },
+        {
+          "k": "NCNG-1129",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>App Builder</strong> — Fixed editable input fields allowing selection of read-only Linked fields as a mapping target."
+        },
+        {
+          "k": "NCNG-1063",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Grids</strong> — Fixed hiding an Editable Grid's default view from breaking the screen at runtime."
+        },
+        {
+          "k": "NCNG-1012",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Grids</strong> — Prevented all columns from being hidden in an Editable Grid."
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "name": "Courtney Riddell",
+      "short": "Growth",
+      "owner": "Growth",
+      "queues": [
+        "https://miurl.cc/ojG3ArDmI"
+      ],
+      "items": [
+        {
+          "k": "GROW-423",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Billing</strong> — Extended partner and account discount handling to the new SKU billing plans."
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "name": "Arshi Sayed",
+      "short": "Admin",
+      "owner": "Admin",
+      "queues": [
+        "https://miurl.cc/DDL235GmI"
+      ],
+      "items": [
+        {
+          "k": "PL-65101",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>User Management</strong> — Added routing to a new SKU-aware Users page behind a rollout flag."
+        },
+        {
+          "k": "PL-65732",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>User Management</strong> — Renamed an internal user-role database column to avoid colliding with customer-created fields."
+        },
+        {
+          "k": "PL-63765",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Multi-entity</strong> — Fixed an issue where the Multi-entity Management link sometimes didn't appear in Account Settings due to incorrect enablement."
+        },
+        {
+          "k": "PL-63503",
+          "audience": "internal",
+          "kind": "sec",
+          "t": "<strong>Account API</strong> — Secured account state and configuration endpoints against unauthorized cross-account access."
+        },
+        {
+          "k": "PL-65097",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>User Management API</strong> — Added role and seat metadata to internal user-list and user-detail API contracts."
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "name": "Phil Côté",
+      "short": "Transactions",
+      "owner": "Transactions / CRM Experience",
+      "queues": [
+        "https://miurl.cc/qbo8L1omI",
+        "https://miurl.cc/yoyjbAqmI"
+      ],
+      "items": [
+        {
+          "k": "PL-65697",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Method Pay</strong> — Fixed a webhook check that blocked saving a tokenized card for an account whose name didn't match its account ID."
+        },
+        {
+          "k": "PL-63806",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Method Pay</strong> — Reset an account's Method Pay connection cleanly after a cancellation."
+        },
+        {
+          "k": "PL-63805",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Method Pay</strong> — Suppressed the rejection email and internal alert for Method Pay cancellations."
+        },
+        {
+          "k": "PL-56295",
+          "audience": "customer",
+          "kind": "fix",
+          "t": "<strong>Activities</strong> — Fixed an issue where My Activities preferences were disabled for users without Activities manage permission."
+        },
+        {
+          "k": "PL-65566",
+          "audience": "customer",
+          "kind": "feature",
+          "t": "<strong>Actions</strong> — Added Character Functions to validate and format phone numbers for SMS."
+        },
+        {
+          "k": "PL-65659",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Requirements Tooling</strong> — Fixed internal requirement records so they sync correctly to the requirements hub."
+        },
+        {
+          "k": "PL-65729",
+          "audience": "internal",
+          "kind": "sec",
+          "t": "<strong>Email Screening</strong> — Masked card numbers and other sensitive data in the internal held-email review screen."
+        },
+        {
+          "k": "PL-65231",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>App Builder</strong> — Added a feature-flag gate controlling when the Kanban board component can be placed."
+        },
+        {
+          "k": "PL-65221",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Kanban Board</strong> — Reworked the Kanban board control to match its intended design and render live data."
+        },
+        {
+          "k": "PL-65227",
+          "audience": "customer",
+          "kind": "feature",
+          "t": "<strong>Editable Grid</strong> — Redesigned and improved Card Column configuration experience."
+        }
+      ],
+      "excluded": [
+        {
+          "k": "PL-65514",
+          "reason": "Tap to Phone V2 self-serve devices card ships entirely dark behind a dev-reveal shortcut and feature flags; explicitly no user-visible surface yet (Method Pay is also limited beta, not GA)."
+        },
+        {
+          "k": "PL-65513",
+          "reason": "Merchant-facing device endpoints are gated off (EnableTapToPhoneSelfServeDevices default false) and ship as backend foundation for a dark feature; Method Pay is also limited beta, not GA."
+        },
+        {
+          "k": "PL-65512",
+          "reason": "Dev-reveal shortcut and feature-flag scaffolding only; explicitly ships dark with no user-visible surface (Method Pay is also limited beta, not GA)."
+        }
+      ]
+    }
+  ]
+}
