@@ -1,0 +1,86 @@
+{
+  "label": "September 28",
+  "areas": [
+    {
+      "name": "John Miranda",
+      "short": "Vertical App Experience",
+      "owner": "Vertical App Experience",
+      "queues": [
+        "https://miurl.cc/pabrRaZmI"
+      ],
+      "items": [
+        {
+          "k": "PL-65688",
+          "audience": "customer",
+          "kind": "fix",
+          "t": "<strong>Grids</strong> — Fixed an issue where the month label was off-center in a grid filter's date picker."
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "name": "Arshi Sayed",
+      "short": "Admin",
+      "owner": "Admin / Connect",
+      "queues": [
+        "https://miurl.cc/qb5DA5omI",
+        "https://miurl.cc/GDq63MLmI"
+      ],
+      "items": [
+        {
+          "k": "PL-65111",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>App Permissions</strong> — Enforced Field Crew (Lite) role restrictions on app access and permission levels."
+        },
+        {
+          "k": "PL-65857",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Preferences/Feature Flags</strong> — Removed retired Xero Notifications and Sync Widget flags from stored account preferences and analytics."
+        },
+        {
+          "k": "PL-62971",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>LegacyBre</strong> — Refactored the legacy business rule engine's SQL access into an async repository layer with no functional change."
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "name": "Phil Côté",
+      "short": "CRM Experience",
+      "owner": "CRM Experience",
+      "queues": [
+        "https://miurl.cc/82ej1AjmI"
+      ],
+      "items": [
+        {
+          "k": "PL-65491",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Method AI</strong> — Fixed an issue where Method AI silently substituted a grid instead of directing users to App Builder."
+        },
+        {
+          "k": "PL-65684",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Kanban Board</strong> — Enhanced Kanban board accessibility with screen reader column counts and keyboard-accessible tooltips for truncated values."
+        },
+        {
+          "k": "PL-65685",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Kanban Board</strong> — Improved Kanban board mobile card dragging with column-by-column paging, faster drop settling, and sticky column headers."
+        }
+      ],
+      "excluded": [
+        {
+          "k": "PL-65896",
+          "reason": "one-off data-repair script for a single customer's account (no code change or general deployment) — not customer release-note material"
+        }
+      ]
+    }
+  ]
+}
