@@ -1,0 +1,247 @@
+{
+  "label": "October 5",
+  "areas": [
+    {
+      "name": "Michael Melo",
+      "short": "No Code Next Gen",
+      "owner": "No Code Next Gen",
+      "queues": [
+        "https://MIurl.cc/r3j223OmI"
+      ],
+      "items": [
+        {
+          "k": "NCNG-2344",
+          "audience": "customer",
+          "kind": "feature",
+          "t": "<strong>Method AI</strong> — Enabled Method AI to set a screen-level Grid View as the default view."
+        },
+        {
+          "k": "NCNG-2326",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Method AI</strong> — Fixed Runtime AI's reset summary to include read-only field customizations."
+        },
+        {
+          "k": "NCNG-2091",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Runtime Customization support tool</strong> — Added an internal tool for Method support staff to temporarily hide Runtime customizations."
+        },
+        {
+          "k": "NCNG-2275",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Method AI</strong> — Added BigQuery logging of Method AI conversation history for internal analysis."
+        },
+        {
+          "k": "NCNG-2253",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Method AI</strong> — Fixed Method AI conversation logging to capture replies on failed action-set builds."
+        },
+        {
+          "k": "NCNG-2314",
+          "audience": "customer",
+          "kind": "feature",
+          "t": "<strong>Method AI</strong> — Fixed Method AI's Action Editor copilot replacing the wrong action in App Routines."
+        },
+        {
+          "k": "NCNG-2335",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Method AI</strong> — Stopped Method AI from reloading the screen when no change was made."
+        },
+        {
+          "k": "NCNG-2181",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Method AI</strong> — Fixed Method AI control placement so hidden controls no longer reserve layout space."
+        },
+        {
+          "k": "NCNG-2327",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Method AI</strong> — Updated Method AI's reset summary to use plain language instead of raw property names."
+        },
+        {
+          "k": "NCNG-2331",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Method AI</strong> — Fixed Runtime AI's decline message to stop referencing a nonexistent draft step."
+        },
+        {
+          "k": "NCNG-2351",
+          "audience": "customer",
+          "kind": "feature",
+          "t": "<strong>Method AI</strong> — Improved Method AI's error handling to show a friendly message instead of a raw error."
+        },
+        {
+          "k": "NCNG-2363",
+          "audience": "customer",
+          "kind": "fix",
+          "t": "<strong>Method AI</strong> — Fixed an issue where Runtime AI's Build-mode decline message implied Ask mode."
+        },
+        {
+          "k": "NCNG-2390",
+          "audience": "customer",
+          "kind": "fix",
+          "t": "<strong>Method AI</strong> — Fixed an issue where Method AI edited the wrong action step after a nested If or Loop."
+        },
+        {
+          "k": "NCNG-2391",
+          "audience": "customer",
+          "kind": "fix",
+          "t": "<strong>Method AI</strong> — Fixed an issue where Method AI failed to add steps that declare and use a new action result together."
+        },
+        {
+          "k": "NCNG-2393",
+          "audience": "customer",
+          "kind": "feature",
+          "t": "<strong>Method AI</strong> — Enabled Method AI's Action Editor Build mode by default for all accounts."
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "name": "Arshi Sayed",
+      "short": "Connect",
+      "owner": "Connect / Admin",
+      "queues": [
+        "https://MIurl.cc/zAjRyl6mI",
+        "https://MIurl.cc/2ljX1qVmI"
+      ],
+      "items": [
+        {
+          "k": "PL-65960",
+          "audience": "customer",
+          "kind": "fix",
+          "t": "<strong>Xero Sync</strong> — Fixed an issue where Refetch from Xero did not resolve invoice sync conflicts."
+        },
+        {
+          "k": "PL-65791",
+          "audience": "customer",
+          "kind": "feature",
+          "t": "<strong>Audit Trail</strong> — Enhanced the audit trail to record every QuickBooks and Xero disconnect or permission change."
+        },
+        {
+          "k": "PL-66156",
+          "audience": "customer",
+          "kind": "fix",
+          "t": "<strong>User Management</strong> — Fixed an issue where resending an invitation wasn't rate-limited on single-entity accounts."
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "name": "John Miranda",
+      "short": "Vertical App Experience",
+      "owner": "Vertical App Experience",
+      "queues": [
+        "https://MIurl.cc/lL2bOMXmI"
+      ],
+      "items": [
+        {
+          "k": "PL-63663",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Signature</strong> — Added automated test coverage and requirement records for the Signature component."
+        },
+        {
+          "k": "PL-65470",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Multi-select</strong> — Added automated test coverage and requirement records for the multi-select dropdown."
+        },
+        {
+          "k": "PL-63666",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Label</strong> — Added automated test coverage and requirement records for the Label component."
+        },
+        {
+          "k": "PL-63667",
+          "audience": "customer",
+          "kind": "fix",
+          "t": "<strong>Toggle</strong> — Fixed an issue where toggle switches couldn't be turned on with the Enter key."
+        },
+        {
+          "k": "PL-63668",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Typography</strong> — Added automated test coverage and requirement records for the Typography text primitive."
+        },
+        {
+          "k": "PL-63673",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>App Activation</strong> — Added automated test coverage and requirement records for the App Activation banner and overlay."
+        },
+        {
+          "k": "PL-63674",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Runtime Interface</strong> — Added automated test coverage and requirement records for the runtime translation layer."
+        },
+        {
+          "k": "PL-63677",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Types library</strong> — Added automated test coverage and requirement records for the shared types library."
+        },
+        {
+          "k": "PL-63678",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Styles</strong> — Added automated test coverage and requirement records for the shared styles and theme tokens."
+        },
+        {
+          "k": "PL-65469",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Gallery</strong> — Added automated test coverage and requirement records for the Gallery component."
+        },
+        {
+          "k": "PL-65477",
+          "audience": "customer",
+          "kind": "fix",
+          "t": "<strong>Editable Grid</strong> — Fixed an issue where a numeric Text Area column could crash the Editable Grid."
+        },
+        {
+          "k": "PL-65473",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Banner</strong> — Added automated test coverage and requirement records for the Banner component."
+        }
+      ],
+      "excluded": [
+        {
+          "k": "PL-66177",
+          "reason": "Inventory Management — dark/unreleased feature (Stock Transfer schema migration)"
+        }
+      ]
+    },
+    {
+      "name": "Phil Côté",
+      "short": "DevOps",
+      "owner": "DevOps / CRM Experience",
+      "queues": [
+        "https://MIurl.cc/Aq32d2zmI",
+        "https://MIurl.cc/V6azD6OmI"
+      ],
+      "items": [
+        {
+          "k": "PL-65465",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Criteria Builder</strong> — Added automated test coverage and requirement records for the criteria builder filters."
+        }
+      ],
+      "excluded": [
+        {
+          "k": "PL-65024",
+          "reason": "Defect — an issue caught pre-production (fix for a not-yet-released feature); not customer-announceable."
+        }
+      ]
+    }
+  ]
+}
