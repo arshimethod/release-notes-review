@@ -1,0 +1,172 @@
+{
+  "label": "October 13",
+  "areas": [
+    {
+      "name": "John Miranda",
+      "short": "Vertical App Experience",
+      "owner": "Vertical App Experience",
+      "queues": [
+        "https://MIurl.cc/qbLe8O5mI"
+      ],
+      "items": [
+        {
+          "k": "PL-65954",
+          "audience": "customer",
+          "kind": "fix",
+          "t": "<strong>App Ribbons</strong> — Fixed an issue where app ribbon tabs showed incorrect or missing record counts."
+        },
+        {
+          "k": "PL-66450",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Events.Subscribers.Tags</strong> — Aligned Tags event-subscriber log levels with Method's logging standard."
+        },
+        {
+          "k": "PL-64211",
+          "audience": "customer",
+          "kind": "feature",
+          "t": "<strong>Purchase Orders</strong> — Replaced the Purchase Order line-items grid with an improved editable grid and views."
+        },
+        {
+          "k": "PL-66453",
+          "audience": "customer",
+          "kind": "feature",
+          "t": "<strong>Items</strong> — Updated Items list screens to use auto-height containers and tabs."
+        }
+      ],
+      "excluded": [
+        {
+          "k": "PL-61627",
+          "reason": "dark project — Inventory Management (Stock Transfers, not yet released)"
+        },
+        {
+          "k": "PL-65734",
+          "reason": "dark project — Inventory Management (Stock Transfers, not yet released)"
+        },
+        {
+          "k": "PL-65076",
+          "reason": "dark project — Inventory Management (Stock Transfers, not yet released)"
+        }
+      ]
+    },
+    {
+      "name": "Phil Côté",
+      "short": "CRM Experience",
+      "owner": "CRM Experience",
+      "queues": [
+        "https://MIurl.cc/OaZzz8dmI"
+      ],
+      "items": [
+        {
+          "k": "PL-65695",
+          "audience": "customer",
+          "kind": "feature",
+          "t": "<strong>App Builder</strong> — Added support for calling and editing screen functions from the action editor."
+        },
+        {
+          "k": "PL-65696",
+          "audience": "customer",
+          "kind": "feature",
+          "t": "<strong>App Builder</strong> — Added a Screen functions panel to create, rename, reorder and delete reusable actions."
+        },
+        {
+          "k": "PL-65813",
+          "audience": "customer",
+          "kind": "feature",
+          "t": "<strong>App Builder</strong> — Added Convert to function, turning an existing event's actions into a reusable function."
+        },
+        {
+          "k": "PL-65945",
+          "audience": "customer",
+          "kind": "feature",
+          "t": "<strong>Method AI</strong> — Enhanced Method AI's Ask feature to explain actions that call a screen function."
+        },
+        {
+          "k": "PL-66360",
+          "audience": "customer",
+          "kind": "feature",
+          "t": "<strong>App Builder</strong> — Ensured screen functions carry over correctly when copying a screen or publishing an app."
+        },
+        {
+          "k": "PL-64765",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Email</strong> — Backfilled missing account IDs on emails to restore sender verification and delivery tracking."
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "name": "Arshi Sayed",
+      "short": "Connect",
+      "owner": "Connect / Admin",
+      "queues": [
+        "https://MIurl.cc/5X1y8MZmI",
+        "https://MIurl.cc/jjZ23dMmI"
+      ],
+      "items": [
+        {
+          "k": "PL-66264",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>CI/CD</strong> — Added provider-state handling for the Intuit token contract test."
+        },
+        {
+          "k": "PL-66261",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>CI/CD</strong> — Extended the Xero sync API contract test to support Push requests."
+        },
+        {
+          "k": "PL-66260",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>CI/CD</strong> — Verified the QuickBooks Online sync contract test and documented coverage."
+        },
+        {
+          "k": "PL-66258",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>CI/CD</strong> — Added strict provider-state handling to the account API contract test fixture."
+        },
+        {
+          "k": "PL-65376",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>CI/CD</strong> — Wired unit, integration and contract tests into the Sync subscriber's CI pipeline."
+        },
+        {
+          "k": "PL-65375",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>CI/CD</strong> — Added consumer contract tests for the Sync subscriber's internal service calls."
+        },
+        {
+          "k": "PL-66505",
+          "audience": "customer",
+          "kind": "fix",
+          "t": "<strong>QBO</strong> — Fixed an issue where invoice and estimate amounts rounded incorrectly, causing QuickBooks sync errors."
+        },
+        {
+          "k": "PL-66274",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Multi-entity</strong> — Enforced the Scale plan requirement when enabling multi-entity, with a clear error otherwise."
+        },
+        {
+          "k": "PL-66281",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Multi-entity</strong> — Improved the multi-entity enable flow with clearer confirmation, loading, and handoff experience."
+        },
+        {
+          "k": "PL-66058",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>ms-preferences-api</strong> — Fixed a cold-start issue causing ms-preferences-api to hang after deploy restarts."
+        }
+      ],
+      "excluded": []
+    }
+  ]
+}
