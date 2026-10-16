@@ -1,0 +1,157 @@
+{
+  "label": "October 19",
+  "areas": [
+    {
+      "name": "Phil Côté",
+      "short": "Transactions",
+      "owner": "Transactions / CRM Experience",
+      "queues": [
+        "https://MIurl.cc/jqaO83rmI",
+        "https://MIurl.cc/ydbR2zDmI"
+      ],
+      "items": [
+        {
+          "k": "PL-66764",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>App Builder</strong> — Fixed payment-method controls and Tap to Pay in the App Builder's Process Payment action for Method Pay accounts."
+        },
+        {
+          "k": "PL-66398",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Payments</strong> — Fixed an issue where saved ACH payments used the customer's name instead of the saved account holder's name."
+        },
+        {
+          "k": "PL-65985",
+          "audience": "customer",
+          "kind": "feature",
+          "t": "<strong>Kanban Board</strong> — Enhanced the stock Opportunities Kanban board to include opportunities shared with you by other users."
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "name": "John Miranda",
+      "short": "Vertical App Experience",
+      "owner": "Vertical App Experience",
+      "queues": [
+        "https://MIurl.cc/Gb3qGpemI"
+      ],
+      "items": [
+        {
+          "k": "PL-66788",
+          "audience": "customer",
+          "kind": "fix",
+          "t": "<strong>Estimates</strong> — Fixed an issue where the copy banner no longer appeared after copying an estimate in QuickBooks Desktop."
+        }
+      ],
+      "excluded": [
+        {
+          "k": "PL-61622",
+          "reason": "dark project — Inventory Management (Stock Transfers)"
+        },
+        {
+          "k": "PL-61623",
+          "reason": "dark project — Inventory Management (Stock Transfers)"
+        },
+        {
+          "k": "PL-65735",
+          "reason": "dark project — Inventory Management (Stock Transfers)"
+        },
+        {
+          "k": "PL-66201",
+          "reason": "dark project — Inventory Management (Stock Transfers)"
+        },
+        {
+          "k": "PL-65265",
+          "reason": "dark project — Inventory Management (Stock Transfers)"
+        },
+        {
+          "k": "PL-65266",
+          "reason": "dark project — Inventory Management (Stock Transfers)"
+        },
+        {
+          "k": "PL-65944",
+          "reason": "dark project — Inventory Management (Stock Transfers)"
+        },
+        {
+          "k": "PL-66130",
+          "reason": "dark project — Inventory Management (Stock Transfers)"
+        },
+        {
+          "k": "PL-66519",
+          "reason": "Defect — an issue caught pre-production (fix for a not-yet-released feature); not customer-announceable."
+        },
+        {
+          "k": "PL-66236",
+          "reason": "dark project — Inventory Management"
+        }
+      ]
+    },
+    {
+      "name": "Michael Melo",
+      "short": "No Code Next Gen",
+      "owner": "No Code Next Gen",
+      "queues": [
+        "https://MIurl.cc/21ayd15mI"
+      ],
+      "items": [
+        {
+          "k": "NCNG-2510",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Runtime Customization</strong> — Enabled runtime screen customization by default for new accounts."
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "name": "Arshi Sayed",
+      "short": "Connect",
+      "owner": "Connect",
+      "queues": [
+        "https://MIurl.cc/eVbRojpmI"
+      ],
+      "items": [
+        {
+          "k": "PL-66426",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>DevOps</strong> — Added automated contract tests verifying the REST API's calls to the account service."
+        },
+        {
+          "k": "PL-66427",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>DevOps</strong> — Added automated contract tests verifying the REST API's file-management calls to the documents service."
+        },
+        {
+          "k": "PL-66428",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>DevOps</strong> — Added automated contract tests verifying the REST API's authentication token requests."
+        },
+        {
+          "k": "PL-66601",
+          "audience": "internal",
+          "kind": "sec",
+          "t": "<strong>API</strong> — Secured the REST API against writing or deleting another entity's records in multi-entity accounts."
+        },
+        {
+          "k": "PL-66653",
+          "audience": "customer",
+          "kind": "fix",
+          "t": "<strong>API</strong> — Fixed an issue where invalid line IDs returned a server error instead of a validation error."
+        },
+        {
+          "k": "PL-66663",
+          "audience": "internal",
+          "kind": "sec",
+          "t": "<strong>API</strong> — Secured the REST API's file endpoints against accessing another entity's files in multi-entity accounts."
+        }
+      ],
+      "excluded": []
+    }
+  ]
+}
