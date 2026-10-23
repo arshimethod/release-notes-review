@@ -1,0 +1,274 @@
+{
+  "label": "October 26",
+  "areas": [
+    {
+      "name": "Phil Côté",
+      "short": "CRM Experience",
+      "owner": "CRM Experience / Transactions",
+      "queues": [
+        "https://MIurl.cc/a3adq2ZmI",
+        "https://MIurl.cc/31d6rOqmI"
+      ],
+      "items": [
+        {
+          "k": "PL-65854",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Mobile App</strong> — Filtered benign cancelled-network-request errors out of iOS crash and error monitoring."
+        },
+        {
+          "k": "PL-65452",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Mobile App</strong> — Added telemetry to measure whether push notification deep links successfully open the target screen."
+        },
+        {
+          "k": "PL-64900",
+          "audience": "customer",
+          "kind": "feature",
+          "t": "<strong>Mobile App</strong> — Delayed the navigation loading spinner so fast screen loads no longer flash it."
+        },
+        {
+          "k": "PL-65449",
+          "audience": "customer",
+          "kind": "fix",
+          "t": "<strong>Mobile App</strong> — Fixed an issue where the app could crash on iOS while loading a screen."
+        },
+        {
+          "k": "PL-66462",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Method Pay</strong> — Enabled Tap to Pay as a payment option in stock Payment, Sales Receipt, and Donation checkouts."
+        },
+        {
+          "k": "PL-65526",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Payments</strong> — Removed the legacy Tap to Phone charge type and retired the temporary reveal flag for the checkbox payment flow."
+        },
+        {
+          "k": "PL-66405",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>DevOps</strong> — Added automated unit and integration test coverage for the billing subscription service."
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "name": "John Miranda",
+      "short": "Vertical App Experience",
+      "owner": "Vertical App Experience",
+      "queues": [
+        "https://MIurl.cc/Gb1lradmI"
+      ],
+      "items": [],
+      "excluded": [
+        {
+          "k": "PL-66713",
+          "reason": "dark project: Inventory Management (Purchase Orders)"
+        },
+        {
+          "k": "PL-67008",
+          "reason": "dark project: Inventory Management"
+        }
+      ]
+    },
+    {
+      "name": "Michael Melo",
+      "short": "No Code Next Gen",
+      "owner": "No Code Next Gen",
+      "queues": [
+        "https://MIurl.cc/lqbZbremI"
+      ],
+      "items": [
+        {
+          "k": "NCNG-2648",
+          "audience": "internal",
+          "kind": "sec",
+          "t": "<strong>Method AI</strong> — Patched Method AI's production containers to a Node.js version with several security fixes."
+        },
+        {
+          "k": "NCNG-2435",
+          "audience": "customer",
+          "kind": "fix",
+          "t": "<strong>Method AI</strong> — Fixed an issue where AI-built filters inside loops could point at the wrong value or come out empty."
+        },
+        {
+          "k": "NCNG-2487",
+          "audience": "customer",
+          "kind": "feature",
+          "t": "<strong>Method AI</strong> — Improved Method AI to use built-in condition operators instead of extra steps for text-matching checks."
+        },
+        {
+          "k": "NCNG-2488",
+          "audience": "internal",
+          "kind": "sec",
+          "t": "<strong>Method AI</strong> — Removed session tokens from Method AI traces sent to the tracing service."
+        },
+        {
+          "k": "NCNG-2518",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Method AI</strong> — Cleaned up Method AI's loop-context handling for filters built inside list loops."
+        },
+        {
+          "k": "NCNG-2328",
+          "audience": "customer",
+          "kind": "feature",
+          "t": "<strong>Method AI</strong> — Added the ability to stop and roll back an in-progress AI screen customization."
+        },
+        {
+          "k": "NCNG-2619",
+          "audience": "customer",
+          "kind": "feature",
+          "t": "<strong>Method AI</strong> — Improved Method AI's guidance so it correctly diagnoses when Row Click doesn't fire on an editable grid."
+        },
+        {
+          "k": "NCNG-2610",
+          "audience": "customer",
+          "kind": "fix",
+          "t": "<strong>Method AI</strong> — Fixed an issue where Method AI said no changes were made after successfully saving a grid column or dropdown edit."
+        },
+        {
+          "k": "NCNG-2627",
+          "audience": "customer",
+          "kind": "fix",
+          "t": "<strong>Method AI</strong> — Fixed an issue where Method AI rejected a valid change because of unrelated, pre-existing errors in the automation."
+        },
+        {
+          "k": "NCNG-2635",
+          "audience": "customer",
+          "kind": "feature",
+          "t": "<strong>Method AI</strong> — Added support for removing grid column validation rules and setting custom Yes/No labels through Method AI."
+        },
+        {
+          "k": "NCNG-2522",
+          "audience": "customer",
+          "kind": "fix",
+          "t": "<strong>Method AI</strong> — Fixed an issue where asking Method AI to disable or enable an action could delete it, leave it unchanged, or time out."
+        },
+        {
+          "k": "NCNG-2612",
+          "audience": "customer",
+          "kind": "fix",
+          "t": "<strong>Method AI</strong> — Fixed an issue where stopping an in-progress AI request cleared the typed prompt from the chat box."
+        },
+        {
+          "k": "NCNG-2636",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Method AI</strong> — Migrated Method AI's cache connections to the upgraded Valkey clusters with TLS and account-based authentication."
+        },
+        {
+          "k": "NCNG-2404",
+          "audience": "customer",
+          "kind": "feature",
+          "t": "<strong>Method AI</strong> — Enhanced the reset summary to name which validation rule changed instead of a generic message."
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "name": "Arshi Sayed",
+      "short": "Admin",
+      "owner": "Admin / Connect",
+      "queues": [
+        "https://MIurl.cc/rqV1ZyLmI",
+        "https://MIurl.cc/RL6yXalmI"
+      ],
+      "items": [
+        {
+          "k": "PL-62791",
+          "audience": "customer",
+          "kind": "fix",
+          "t": "<strong>User Permissions</strong> — Fixed an issue where removing a Super Admin's permissions appeared to save but had no effect."
+        },
+        {
+          "k": "PL-65314",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Sign-in</strong> — Added automated test coverage for the sign-in service."
+        },
+        {
+          "k": "PL-66851",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Sign-in</strong> — Migrated sign-in's cache connection to support TLS and account-based authentication on the upgraded cache clusters."
+        },
+        {
+          "k": "PL-66855",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Import/Export</strong> — Migrated Import/Export's cache connection to support TLS and account-based authentication on the upgraded cache clusters."
+        },
+        {
+          "k": "PL-66857",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Classic</strong> — Migrated the classic CRM's cache connection to support TLS and account-based authentication on the upgraded cache clusters."
+        },
+        {
+          "k": "PL-62802",
+          "audience": "customer",
+          "kind": "fix",
+          "t": "<strong>QBDT</strong> — Fixed an issue where line custom field edits on Sales Orders, Purchase Orders, Invoices, Credit Memos, and Estimates reverted or went blank after syncing with QuickBooks Desktop."
+        },
+        {
+          "k": "PL-66690",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>DevOps</strong> — Added contract test verification for the authentication endpoints used by QuickBooks Online sync."
+        },
+        {
+          "k": "PL-66691",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>DevOps</strong> — Added contract test verification for the account service's cluster lookup used by QuickBooks Online sync."
+        },
+        {
+          "k": "PL-66692",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>DevOps</strong> — Added contract test verification for the Intuit token endpoints used by QuickBooks Online sync."
+        },
+        {
+          "k": "PL-66693",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>DevOps</strong> — Added contract test verification for the email endpoint used by QuickBooks Online sync."
+        },
+        {
+          "k": "PL-66760",
+          "audience": "customer",
+          "kind": "fix",
+          "t": "<strong>QBDT</strong> — Fixed an issue where QuickBooks Desktop's transaction history sync setting offered a Skip option that didn't work."
+        },
+        {
+          "k": "PL-67000",
+          "audience": "customer",
+          "kind": "fix",
+          "t": "<strong>REST API</strong> — Fixed an issue where REST API aggregate queries rejected aliases containing special characters."
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "name": "Courtney Riddell",
+      "short": "Growth",
+      "owner": "Growth",
+      "queues": [
+        "https://MIurl.cc/21XRG6bmI"
+      ],
+      "items": [
+        {
+          "k": "GROW-343",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Dashboard</strong> — Removed unnecessary backend checks for the Home page feature flag, reducing page load delay."
+        }
+      ],
+      "excluded": []
+    }
+  ]
+}
