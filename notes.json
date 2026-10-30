@@ -1,0 +1,167 @@
+{
+  "label": "November 2",
+  "areas": [
+    {
+      "name": "Phil Côté",
+      "short": "CRM Experience",
+      "owner": "CRM Experience / Transactions",
+      "queues": [
+        "https://miurl.cc/O222M51mI",
+        "https://MIurl.cc/O222M51mI",
+        "https://MIurl.cc/pqqaAyRmI"
+      ],
+      "items": [
+        {
+          "k": "PL-67067",
+          "audience": "customer",
+          "kind": "feature",
+          "t": "<strong>Kanban Board</strong> — Added a resizable height to the Kanban board in App Builder, used as its minimum height at runtime."
+        },
+        {
+          "k": "PL-66639",
+          "audience": "customer",
+          "kind": "fix",
+          "t": "<strong>Kanban Board</strong> — Fixed an issue where a Kanban view filter using a screen control's value showed no cards."
+        },
+        {
+          "k": "PL-66901",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Email monitoring service</strong> — Added a 5-second timeout for internal service calls so the email monitoring snapshot fails fast instead of hanging for 100 seconds."
+        },
+        {
+          "k": "PL-65833",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Regression publish tool</strong> — Extended the internal regression publish and reset tool to cover app ribbons and app settings in test accounts."
+        },
+        {
+          "k": "PL-66962",
+          "audience": "customer",
+          "kind": "feature",
+          "t": "<strong>Payment Gateways</strong> — Added disclosure of the 0.25% platform fee when connecting a Shuttle payment gateway."
+        },
+        {
+          "k": "PL-65941",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Method Pay</strong> — Added a dismiss option to the Method Pay hero banner on the Home page."
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "name": "Courtney Riddell",
+      "short": "Growth",
+      "owner": "Growth",
+      "queues": [
+        "https://MIurl.cc/qqqqO8amI"
+      ],
+      "items": [
+        {
+          "k": "GROW-698",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Analytics</strong> — Added a platform (web/mobile) property to onboarding analytics events."
+        },
+        {
+          "k": "GROW-659",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Analytics</strong> — Added AI assistants as a new attribution channel for signup tracking."
+        },
+        {
+          "k": "GROW-628",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Analytics</strong> — Added a near-real-time page-view event for the Customers &amp; Leads list to support onboarding analytics."
+        },
+        {
+          "k": "GROW-704",
+          "audience": "customer",
+          "kind": "fix",
+          "t": "<strong>Opportunities</strong> — Fixed an issue where the \"Assigned to\" filter pill didn't appear after clicking the My Sales Pipeline Home card."
+        },
+        {
+          "k": "GROW-705",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Migration Service</strong> — Fixed a database migration that failed on accounts missing an index column, which had blocked later migrations."
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "name": "Arshi Sayed",
+      "short": "Admin",
+      "owner": "Admin / Connect",
+      "queues": [
+        "https://MIurl.cc/211162bmI",
+        "https://MIurl.cc/dMMMVAGmI"
+      ],
+      "items": [
+        {
+          "k": "PL-66942",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>App entitlements</strong> — Added server-side enforcement so a locked app can't be installed by bypassing the UI."
+        },
+        {
+          "k": "PL-66947",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>App lock resolver</strong> — Added a shared resolver and visual treatment for locked apps, for upcoming plan-based surfaces."
+        },
+        {
+          "k": "PL-66494",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Gmail Sidebar</strong> — Converted the Gmail Addon integration page to TypeScript."
+        },
+        {
+          "k": "PL-66794",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Sign-in</strong> — Fixed a bug that sent extra audit-trail entries when revoking access against an unreachable broker."
+        },
+        {
+          "k": "PL-66916",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>ms-account-api</strong> — Added provider contract verification for Google Calendar sync's account cluster lookup."
+        },
+        {
+          "k": "PL-66918",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>oauth2</strong> — Added provider contract verification for Google Calendar sync's token lookup."
+        },
+        {
+          "k": "PL-66812",
+          "audience": "internal",
+          "kind": "sec",
+          "t": "<strong>Sign-in</strong> — Fixed an open-redirect vulnerability in sign-in and consent return-URL handling."
+        },
+        {
+          "k": "PL-67019",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>API</strong> — Added durable usage telemetry for the REST API, including rate-limit counts and auth method tagging."
+        },
+        {
+          "k": "PL-67083",
+          "audience": "customer",
+          "kind": "fix",
+          "t": "<strong>API</strong> — Fixed an issue where a non-object JSON body on a table create or update request returned a server error instead of a clear error."
+        },
+        {
+          "k": "PL-66630",
+          "audience": "customer",
+          "kind": "fix",
+          "t": "<strong>API</strong> — Fixed an issue where updating only nested child rows without header fields failed with an error."
+        }
+      ],
+      "excluded": []
+    }
+  ]
+}
