@@ -1,0 +1,117 @@
+{
+  "label": "November 9",
+  "areas": [
+    {
+      "name": "Arshi Sayed",
+      "short": "Admin",
+      "owner": "Admin / Connect",
+      "queues": [
+        "https://MIurl.cc/be5b8XOmI",
+        "https://MIurl.cc/O2lq16ZmI"
+      ],
+      "items": [
+        {
+          "k": "PL-66945",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>SKU packaging</strong> — Added placeholder screens for the Jobs and Schedule apps, dormant until a future release."
+        },
+        {
+          "k": "PL-65216",
+          "audience": "customer",
+          "kind": "fix",
+          "t": "<strong>Attachments</strong> — Fixed an issue where editing an attached document link could fail with an error."
+        },
+        {
+          "k": "PL-66813",
+          "audience": "internal",
+          "kind": "sec",
+          "t": "<strong>Sign-in</strong> — Closed an open-redirect vulnerability in the OAuth2 account-connect flow."
+        },
+        {
+          "k": "PL-67370",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>QBO</strong> — Enabled an existing QBO address-recovery fix for an additional customer account."
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "name": "Phil Côté",
+      "short": "Transactions",
+      "owner": "Transactions",
+      "queues": [
+        "https://MIurl.cc/X2bojM1mI"
+      ],
+      "items": [
+        {
+          "k": "PL-67045",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>CI/CD</strong> — Added automated contract testing to verify runtime-core's payment-processing API against billing's expectations."
+        },
+        {
+          "k": "PL-67044",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>CI/CD</strong> — Added automated contract testing to verify the analytics API against billing's expectations."
+        },
+        {
+          "k": "PL-67043",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>CI/CD</strong> — Added automated contract testing to verify the mobile-notifications API against billing's expectations."
+        },
+        {
+          "k": "PL-66502",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Tap to Pay</strong> — Added a device-readiness checklist shown before a Tap to Pay payment, released behind a feature flag."
+        },
+        {
+          "k": "PL-66140",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Tap to Pay</strong> — Implemented the on-device Tap to Pay payment flow with server confirmation, released behind a feature flag."
+        },
+        {
+          "k": "PL-66139",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Tap to Pay</strong> — Added tapping a payment on the merchant's own device, released behind a feature flag."
+        },
+        {
+          "k": "PL-66121",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Tap to Pay</strong> — Added server-side verification of on-device Tap to Pay payments, released behind a feature flag."
+        }
+      ],
+      "excluded": []
+    },
+    {
+      "name": "Courtney Riddell",
+      "short": "Growth",
+      "owner": "Growth",
+      "queues": [
+        "https://MIurl.cc/21OGqpVmI"
+      ],
+      "items": [
+        {
+          "k": "GROW-700",
+          "audience": "customer",
+          "kind": "fix",
+          "t": "<strong>Multi-entity</strong> — Fixed an issue where QuickBooks setup links always failed for multi-entity accounts."
+        },
+        {
+          "k": "GROW-473",
+          "audience": "internal",
+          "kind": "internal",
+          "t": "<strong>Analytics</strong> — Added automated requirements-traceability tooling and tests to the analytics service."
+        }
+      ],
+      "excluded": []
+    }
+  ]
+}
